@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dfkff8tonsou0" path="res://Human/Art/Temp Art/Thigh.png" id="1_a7aqr"]
 [ext_resource type="Texture2D" uid="uid://dqfc7mvwa7q5f" path="res://Human/Art/Temp Art/calf.png" id="2_3h4pw"]
 [ext_resource type="Texture2D" uid="uid://2cvrr7bm8i1r" path="res://Human/Art/Temp Art/foot.png" id="3_ter3g"]
-[ext_resource type="Script" path="res://Human/Scripts/LimbController.gd" id="4_5uenh"]
+[ext_resource type="Script" path="res://Human/Scripts/LimbTarget.gd" id="4_5uenh"]
 
 [sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_yk182"]
 target_nodepath = NodePath("../Targets/FootTarget")
