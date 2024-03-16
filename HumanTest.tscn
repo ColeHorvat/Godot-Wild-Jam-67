@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx6n4vrtjfq2x"]
+
+[ext_resource type="PackedScene" uid="uid://b4pnirujchpak" path="res://Human/Human.tscn" id="1_r8ncv"]
+
+[node name="HumanTest" type="Node2D"]
+
+[node name="Human" parent="." instance=ExtResource("1_r8ncv")]
+position = Vector2(11, 64)
+scale = Vector2(0.5, 0.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]

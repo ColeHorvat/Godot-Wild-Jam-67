@@ -1,0 +1,247 @@
+[gd_scene load_steps=16 format=3 uid="uid://b4pnirujchpak"]
+
+[ext_resource type="Texture2D" uid="uid://dfkff8tonsou0" path="res://Human/Art/Temp Art/Thigh.png" id="1_1t53i"]
+[ext_resource type="Texture2D" uid="uid://hkj0a612axgu" path="res://Human/Art/Temp Art/Arm.png" id="1_8inqv"]
+[ext_resource type="Texture2D" uid="uid://84m1xwpvjtsq" path="res://Human/Art/Temp Art/Torso.png" id="1_x4h4u"]
+[ext_resource type="Texture2D" uid="uid://iy12mxrux27l" path="res://Human/Art/Temp Art/Hand.png" id="2_7ip2o"]
+[ext_resource type="Script" path="res://Human/Calf.gd" id="2_id0rg"]
+[ext_resource type="Texture2D" uid="uid://dqfc7mvwa7q5f" path="res://Human/Art/Temp Art/calf.png" id="2_yl452"]
+[ext_resource type="Texture2D" uid="uid://2cvrr7bm8i1r" path="res://Human/Art/Temp Art/foot.png" id="3_nfsw2"]
+[ext_resource type="Script" path="res://Human/Scripts/LimbController.gd" id="3_xueu1"]
+[ext_resource type="Texture2D" uid="uid://bafdnjfbp2j14" path="res://Human/Art/Temp Art/Head.png" id="8_rsjh1"]
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_bxpvx"]
+target_nodepath = NodePath("../../Targets/BackLegTarget")
+tip_nodepath = NodePath("Thigh/Calf/Foot")
+ccdik_data_chain_length = 3
+joint_data/0/bone_index = 0
+joint_data/0/bone2d_node = NodePath("Thigh")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = -83.0
+joint_data/0/constraint_angle_max = -263.0
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 1
+joint_data/1/bone2d_node = NodePath("Thigh/Calf")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = 1.288
+joint_data/1/constraint_angle_max = 90.0
+joint_data/1/constraint_angle_invert = false
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+joint_data/2/bone_index = 2
+joint_data/2/bone2d_node = NodePath("Thigh/Calf/Foot")
+joint_data/2/rotate_from_joint = true
+joint_data/2/enable_constraint = true
+joint_data/2/constraint_angle_min = -0.01
+joint_data/2/constraint_angle_max = 360.0
+joint_data/2/constraint_angle_invert = false
+joint_data/2/constraint_in_localspace = true
+joint_data/2/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_26dwp"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DCCDIK_bxpvx")
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_wts4s"]
+target_nodepath = NodePath("../../Targets/FrontLegTarget")
+tip_nodepath = NodePath("Thigh/Calf/Foot")
+ccdik_data_chain_length = 3
+joint_data/0/bone_index = 0
+joint_data/0/bone2d_node = NodePath("Thigh")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = -83.0
+joint_data/0/constraint_angle_max = -263.0
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 1
+joint_data/1/bone2d_node = NodePath("Thigh/Calf")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = 1.288
+joint_data/1/constraint_angle_max = 90.0
+joint_data/1/constraint_angle_invert = false
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+joint_data/2/bone_index = 2
+joint_data/2/bone2d_node = NodePath("Thigh/Calf/Foot")
+joint_data/2/rotate_from_joint = false
+joint_data/2/enable_constraint = true
+joint_data/2/constraint_angle_min = -0.01
+joint_data/2/constraint_angle_max = 360.0
+joint_data/2/constraint_angle_invert = false
+joint_data/2/constraint_in_localspace = true
+joint_data/2/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_8e1bs"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DCCDIK_wts4s")
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_uoruw"]
+target_nodepath = NodePath("../../Targets/HandTarget")
+tip_nodepath = NodePath("Bicep/Forearm/Hand")
+ccdik_data_chain_length = 3
+joint_data/0/bone_index = 0
+joint_data/0/bone2d_node = NodePath("Bicep")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = false
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 1
+joint_data/1/bone2d_node = NodePath("Bicep/Forearm")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = -180.0
+joint_data/1/constraint_angle_max = 360.0
+joint_data/1/constraint_angle_invert = false
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+joint_data/2/bone_index = 2
+joint_data/2/bone2d_node = NodePath("Bicep/Forearm/Hand")
+joint_data/2/rotate_from_joint = false
+joint_data/2/enable_constraint = true
+joint_data/2/constraint_angle_min = -0.01
+joint_data/2/constraint_angle_max = 360.0
+joint_data/2/constraint_angle_invert = false
+joint_data/2/constraint_in_localspace = true
+joint_data/2/editor_draw_gizmo = false
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_jabdi"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DCCDIK_uoruw")
+
+[node name="Human" type="Node2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="Back Leg" type="Node2D" parent="."]
+position = Vector2(-14, -108)
+
+[node name="LegSkeleton" type="Skeleton2D" parent="Back Leg"]
+modification_stack = SubResource("SkeletonModificationStack2D_26dwp")
+
+[node name="Thigh" type="Bone2D" parent="Back Leg/LegSkeleton"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Thigh" type="Sprite2D" parent="Back Leg/LegSkeleton/Thigh"]
+position = Vector2(2, 26)
+texture = ExtResource("1_1t53i")
+
+[node name="Calf" type="Bone2D" parent="Back Leg/LegSkeleton/Thigh"]
+position = Vector2(6, 52)
+rest = Transform2D(1, 0, 0, 1, 6, 52)
+script = ExtResource("2_id0rg")
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Calf" type="Sprite2D" parent="Back Leg/LegSkeleton/Thigh/Calf"]
+position = Vector2(1, 22)
+texture = ExtResource("2_yl452")
+
+[node name="Foot" type="Bone2D" parent="Back Leg/LegSkeleton/Thigh/Calf"]
+position = Vector2(1.3113e-06, 38.0002)
+rotation = 1.31598
+scale = Vector2(1.00162, 0.999206)
+rest = Transform2D(1, 0, 0, 1, 0, 38)
+script = ExtResource("2_id0rg")
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Foot" type="Sprite2D" parent="Back Leg/LegSkeleton/Thigh/Calf/Foot"]
+position = Vector2(10, 9)
+texture = ExtResource("3_nfsw2")
+
+[node name="Front Leg" type="Node2D" parent="."]
+position = Vector2(-18, -108)
+
+[node name="LegSkeleton" type="Skeleton2D" parent="Front Leg"]
+modification_stack = SubResource("SkeletonModificationStack2D_8e1bs")
+
+[node name="Thigh" type="Bone2D" parent="Front Leg/LegSkeleton"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Thigh" type="Sprite2D" parent="Front Leg/LegSkeleton/Thigh"]
+position = Vector2(2, 26)
+texture = ExtResource("1_1t53i")
+
+[node name="Calf" type="Bone2D" parent="Front Leg/LegSkeleton/Thigh"]
+position = Vector2(6, 52)
+rest = Transform2D(1, 0, 0, 1, 6, 52)
+script = ExtResource("2_id0rg")
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Calf" type="Sprite2D" parent="Front Leg/LegSkeleton/Thigh/Calf"]
+position = Vector2(1, 22)
+texture = ExtResource("2_yl452")
+
+[node name="Foot" type="Bone2D" parent="Front Leg/LegSkeleton/Thigh/Calf"]
+position = Vector2(0, 38)
+rest = Transform2D(1, 0, 0, 1, 0, 38)
+script = ExtResource("2_id0rg")
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Foot" type="Sprite2D" parent="Front Leg/LegSkeleton/Thigh/Calf/Foot"]
+position = Vector2(10, 9)
+texture = ExtResource("3_nfsw2")
+
+[node name="Targets" type="Node2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="HandTarget" type="Marker2D" parent="Targets"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+script = ExtResource("3_xueu1")
+
+[node name="FrontLegTarget" type="Marker2D" parent="Targets"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+script = ExtResource("3_xueu1")
+
+[node name="BackLegTarget" type="Marker2D" parent="Targets"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+script = ExtResource("3_xueu1")
+
+[node name="Torso" type="Sprite2D" parent="."]
+position = Vector2(-18, -152)
+texture = ExtResource("1_x4h4u")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(-16, -223)
+texture = ExtResource("8_rsjh1")
+
+[node name="Arm" type="Node2D" parent="."]
+position = Vector2(-18, -175)
+
+[node name="ArmSkeleton" type="Skeleton2D" parent="Arm"]
+modification_stack = SubResource("SkeletonModificationStack2D_jabdi")
+
+[node name="Bicep" type="Bone2D" parent="Arm/ArmSkeleton"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Bicep" type="Sprite2D" parent="Arm/ArmSkeleton/Bicep"]
+position = Vector2(21, 0)
+texture = ExtResource("1_8inqv")
+
+[node name="Forearm" type="Bone2D" parent="Arm/ArmSkeleton/Bicep"]
+position = Vector2(36, -1.13687e-13)
+rest = Transform2D(1, 0, 0, 1, 36, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Forearm" type="Sprite2D" parent="Arm/ArmSkeleton/Bicep/Forearm"]
+position = Vector2(21, 0)
+texture = ExtResource("1_8inqv")
+
+[node name="Hand" type="Bone2D" parent="Arm/ArmSkeleton/Bicep/Forearm"]
+position = Vector2(39, 0)
+rotation = -0.000174348
+rest = Transform2D(1, 0, 0, 1, 39, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Hand" type="Sprite2D" parent="Arm/ArmSkeleton/Bicep/Forearm/Hand"]
+position = Vector2(14, -3)
+texture = ExtResource("2_7ip2o")
