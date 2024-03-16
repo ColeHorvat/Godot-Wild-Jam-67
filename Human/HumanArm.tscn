@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dms7vr1eq4jci"]
 
 [ext_resource type="Texture2D" uid="uid://hkj0a612axgu" path="res://Human/Art/Temp Art/Arm.png" id="1_71uqt"]
-[ext_resource type="Script" path="res://Human/Scripts/LimbController.gd" id="1_c11pw"]
+[ext_resource type="Script" path="res://Human/Scripts/LimbTarget.gd" id="1_c11pw"]
 [ext_resource type="Texture2D" uid="uid://iy12mxrux27l" path="res://Human/Art/Temp Art/Hand.png" id="2_gbh2b"]
 
 [sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_ahpyb"]
