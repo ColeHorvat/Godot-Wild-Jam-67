@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://dms7vr1eq4jci"]
+
+[ext_resource type="Texture2D" uid="uid://hkj0a612axgu" path="res://Human/Art/Temp Art/Arm.png" id="1_71uqt"]
+[ext_resource type="Script" path="res://Human/Scripts/LimbController.gd" id="1_c11pw"]
+[ext_resource type="Texture2D" uid="uid://iy12mxrux27l" path="res://Human/Art/Temp Art/Hand.png" id="2_gbh2b"]
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_ahpyb"]
+target_nodepath = NodePath("../Targets/HandTarget")
+tip_nodepath = NodePath("Bicep/Forearm/Hand")
+ccdik_data_chain_length = 3
+joint_data/0/bone_index = 0
+joint_data/0/bone2d_node = NodePath("Bicep")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = false
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 1
+joint_data/1/bone2d_node = NodePath("Bicep/Forearm")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = -180.0
+joint_data/1/constraint_angle_max = 360.0
+joint_data/1/constraint_angle_invert = false
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+joint_data/2/bone_index = 2
+joint_data/2/bone2d_node = NodePath("Bicep/Forearm/Hand")
+joint_data/2/rotate_from_joint = false
+joint_data/2/enable_constraint = true
+joint_data/2/constraint_angle_min = -0.01
+joint_data/2/constraint_angle_max = 360.0
+joint_data/2/constraint_angle_invert = false
+joint_data/2/constraint_in_localspace = true
+joint_data/2/editor_draw_gizmo = false
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_q0wam"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DCCDIK_ahpyb")
+
+[node name="HumanArm" type="Node2D"]
+
+[node name="Arm" type="Skeleton2D" parent="."]
+modification_stack = SubResource("SkeletonModificationStack2D_q0wam")
+
+[node name="Bicep" type="Bone2D" parent="Arm"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Bicep" type="Sprite2D" parent="Arm/Bicep"]
+position = Vector2(21, 0)
+texture = ExtResource("1_71uqt")
+
+[node name="Forearm" type="Bone2D" parent="Arm/Bicep"]
+position = Vector2(36, -1.13687e-13)
+rest = Transform2D(1, 0, 0, 1, 36, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Forearm" type="Sprite2D" parent="Arm/Bicep/Forearm"]
+position = Vector2(21, 0)
+texture = ExtResource("1_71uqt")
+
+[node name="Hand" type="Bone2D" parent="Arm/Bicep/Forearm"]
+position = Vector2(39, 0)
+rotation = -0.000174348
+rest = Transform2D(1, 0, 0, 1, 39, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="v_Hand" type="Sprite2D" parent="Arm/Bicep/Forearm/Hand"]
+position = Vector2(14, -3)
+texture = ExtResource("2_gbh2b")
+
+[node name="Targets" type="Node2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="HandTarget" type="Marker2D" parent="Targets"]
+position = Vector2(98, 0)
+
+[node name="LimbController" type="Node" parent="."]
+script = ExtResource("1_c11pw")
